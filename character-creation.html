@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Character Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                    <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                </a>  
+
+            </div>
+
+            <div class="navbar-core">
+                
+                
+                <a href="./index.html"><button class="navbar-button" rel="noopener noreferrer">About</button></a>
+
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> The Pipeline</p>
+                    </li>
+
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Character Creation
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./image-processing.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Image Processing
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./face-animation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Face Animation
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./atlas-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Atlas Creation and Export
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <a href="./ddhunitysetup.html"><button class="navbar-button" rel="noopener noreferrer">Unity Setup</button></a>
+                
+                <a href="./resources.html"><button class="navbar-button" rel="noopener noreferrer">Resources</button></a>
+                
+                <a href="./contact.html"><button class="navbar-button" rel="noopener noreferrer">Contact</button></a>
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+
+                <h2>Character Creation (CC3-Zbrush-Maya Workflow)</h2>
+                <div class="wrapper-space-top">
+                    <p>
+                        This process creates the Character model.  Combined with either a structured light scan or a photogrammetry scan of your actor, we use Real Illusions Character Creator, Zbrush and Maya to make the model relatively lightweight and optimized.
+                    </p> 
+                </div>               
+
+                <h3>1.1 Setup character using Character Creator 3 (CC3)</h3>
+                <div class="wrapper-space-top">
+                    <p>Create a base CC3+ character using the workflow in the following link:  <a href="https://www.reallusion.com/character-creator/3d-scan-learning.html" rel="noopener noreferrer" target="_blank"><strong class="hover-link">CC3 Pipeline Setup</strong> </a> </p>
+                </div>
+
+                <h3>1.2 Export character to Zbrush</h3>
+                <div class="wrapper-space-top">
+                    <p>1. Import scanned model into Zbrush</p>
+                    <p>2. Sculpt character to match scanned model</p>
+                    <p>3. Move teeth and eyes to the correct location</p>
+                    <p>4. Move eyelashes and hair to the correct location</p>
+                    <p>5. Export sculpted model</p>
+                </div>              
+
+                <h3>1.3 Import sculpted model into CC3</h3>
+                <div class="wrapper-space-top">
+                    <p>1. Clean up geometry</p>
+                    <p>2. Make sure the model's topology is symmetrized before export</p>
+                    <img src="./Images/Screenshots/CC-FaceSetup.png" alt="CC-Face Setup"  class="medium-image">
+                    <p>3. Create textures and fix seams</p>
+                </div>
+        
+                <h3>1.4 Export character (for Mobile VR) - For Unity or Unreal Engine (bone system)</h3>
+                <div class="wrapper-space-top wrapper-space-bottom">
+                    <p>1. Separate head mesh from the body</p>
+                    <p class="tab">i. Delete hidden geometry</p>
+                    <p class="tab">ii. Optional: Separate eyelashes from the head mesh</p>
+                    <p class="tab">iii. Export</p>
+    
+                    <img src="./Images/Screenshots/CC-FaceSetup2.png" alt="CC-Face Setup 2" class="medium-image">
+    
+                    <img src="./Images/Screenshots/CC-FaceSetup3.png" alt="CC-Face Setup 3" class="medium-image">
+    
+                    <p>2. Combine clothing meshes together (UV and geometry)</p>
+                    <p class="tab">i. Export (Instamesh LOD, Type)</p>
+    
+                    <img src="./Images/Screenshots/CC-CombineClothing.png" alt="CC-Combine Clothing" class="medium-image">
+    
+                    <p>3. Combine clothing meshes together (UV and geometry)</p>
+                    <p class="tab">i. Export (Instamesh LOD, Type)</p>
+
+                    <img src="./Images/Screenshots/CC-CombineBody.png" alt="CC-Combine Body" class="medium-image">
+
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">CC3 recommended export settings (for mobile VR)</p>
+                        <p class="note-box-content tab">1. Separate head and body</p>
+                        <p class="note-box-content tab">2. Use Mouth_Open as blendshape - removed jaw from animations</p>
+                        <p class="note-box-content tab">3. Combine clothing meshes into one UV</p>
+                    </div>
+                </div>
+
+                <h3>1.5 Adjustments in Maya (combining meshes, keeping head and morph inputs)</h3>
+                <div class="wrapper-space-top">
+    
+                        <p>1. Import head mesh (imports skinning and skeleton)</p>
+                        <p class="tab">i. Reset blendshape animation to 0</p>
+                        <p class="tab">ii. Combine repeated materials (eye occlusion, eyelash, tearline)</p>
+                        <p class="tab">iii. Select root node and create a bind pose </p>
+
+                        <div class="wrapper-doublespace-top">
+                            <p>2. Import <em>DDH Head</em> and <em >DDH Mouth</em> materials</p>
+                            <p class="tab">i. Download <a href="https://drive.google.com/drive/folders/1w-9CvkW02UyvZb1BTBO7xXPFzHY8fry1?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">DDH Material File</strong></a></p>
+                            <p class="tab">ii. Assign DDH Head and DDH Mouth to Display Nodes</p>
+                            <p class="tab">iii. Delete unused materials</p>
+                        </div>
+                    
+                        <div class="wrapper-doublespace-top">
+                            <p>3. Optional: Combine eyelashes into head</p>
+                            <p class="tab">i. Bake blendshapes - convert to separate geometry</p>
+                            <p class="tab">ii. Unbing eyelash geometry</p>
+                            <p class="tab">iii. Create Eyelashes_Blendshapes for new eyelash geometry targets (Eyelashes_Blink - L/R, Eyelashes_Wide - L/R, Eyelashes_Squint - L/R)</p>
+                            <p class="tab">iv. Skin <em>Eyelashes</em> geometry to CC_Base_Head joint</p>
+                            <p class="tab">v. Connect (Eye_Blink - L/R, Eye_Wide - L/R, Eye_Squint - L/R) to Head_Blendshapes (through the connection editor)</p>
+                            <p class="tab">vi. Assign repeating materials to similar geometry</p>
+                        </div>
+                        
+                        <div class="wrapper-doublespace-top">
+                            <p>4. Import clothing</p>
+                            <p class="tab">i. Duplicate clothing geometry</p>
+                            <p class="tab">ii. Bind</p>
+                            <p class="tab">iii. Transfer skinning to CC_Base_Head skeleton</p>
+                            <p class="tab">iv. Delete uunused skeleton</p>
+                        </div>
+
+                        <div class="wrapper-doublespace-top">
+                            <p>5. Import body</p>
+                            <p class="tab">i. Unbind geometry and bake positions</p>
+                            <p class="tab">ii. Duplicate geometry</p>
+                            <p class="tab">iii. Create new optimized UV layout (fill UV area) on new geometry</p>
+                            <p class="tab">iv. Using transfer maps, transfer diffuse and normal maps to new UV locations</p>
+                            <p class="tab">v. Skin new body to skeleton</p>
+                            <p class="tab">vi. Delete old skeleton</p>
+                        </div>
+                        
+                        <div class="wrapper-doublespace-top">
+                            <p>6. Import mouth geometry</p>
+                            <p class="tab">i. Download <a href="https://drive.google.com/drive/folders/1iLVSn-0Eb3z1anlrPgdwHp7AmC3I1eb5?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Mouth geometry</strong></a></p>
+                            <p class="tab">ii. Fit <em>MouthMask</em> geometry to <em >CC_Base_Teeth</em>  geometry</p>
+                            <p class="tab">iii. Freeze and reset transformations to origin</p>
+                            <p class="tab">iv. Skin <em>MouthMask</em> geometry to <em>CC_Base_Teeth01</em> and <em>CC_Base_Teeth02</em></p>
+                            <p class="doubletab">- Unbind geometry and bake positions</p>
+                            <p class="doubletab">- Assign DDH mouth material to <em>MouthMask</em> geometry</p>
+                            <p class="tab">v. Create blendshape for "Mouth Open" and connect it in the connection editor</p>
+                        </div>
+                        
+                        <div class="wrapper-doublespace-top">
+                            <p>7. Clean up nodes</p>
+                            <p class="tab">i. Morph targets - delete unused blendshapes</p>
+                            <p class="tab">ii. Make all connections for blendshapes (tearline, occlusion or remove)</p>
+                            <p class="tab">iii. Return character to bind pose</p>
+                            <p class="tab">iv. Set bind pose on root bone</p>
+                            <p class="tab">v. Make sure meshes do not overlap</p>
+                        </div>
+                        
+
+                </div>
+
+                <h3>1.6 Creating/altering blendshapes from Range of Motion (ROM)</h3>
+                <section>
+                    <div class="wrapper-space-top wrapper-doublespace-bottom">
+                        <p>Method 1: Use ROM overlay to adjust automated blendshape positions to desired video ROM locations (approximation)</p>
+                        <p>Method 2: Use scan data to align morph target shapes to scan positions</p>
+                        <p>Method 3: Use scan data to create new morph targets using wrap</p>
+                    </div>
+    
+                    <em><strong id="non-header-title">Modifying blend shapes for DDH</strong> </em>
+    
+                    <div class="wrapper-space-top">
+                        <p>Use ROM video to correct and/or adjust extreme pose locations in Maya 2020+</p>
+                        <p>1. Set camera plane to fit front projection of actor's face</p>
+                        <p>2. Apply projection head shader to face (using stabilized ROM footage)</p>
+                        <p class="tab">i. Keep aspect ration of image plane to fit eyes into position</p>
+                        <p class="tab">ii. Load retargeter ROM sequence</p>
+                        <p class="tab">iii. Go to poses and update shapes by sculpting on character (in edit mode)</p>
+                    </div>
+                </section>
+ 
+                <h3>1.7 Exporting character</h3>
+                <section>
+                    <div class="wrapper-space-top wrapper-doublespace-bottom">
+                        <p>Select all geometry, select root bone and export to fbx.</p>
+                        <p>In the export settings, enable: </p>
+                        <p class="tab">i. Deformed models (skins and blend shapes)</p>
+                        <p class="tab">ii. Embed media</p>
+                        <br>
+                        <p>Example character FBX export: <a href="https://drive.google.com/drive/folders/1RbqOE7K0JI7IM7_Bk_foQKC51tNiJg7y?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Download Laura_V5</strong></a></p>
+                    </div>
+    
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">CC3 recommended export settings (for mobile VR)</p>
+                        <p class="note-box-content tab">1. Reset geometry transformations to the origin</p>
+                        <p class="note-box-content tab">2. Delete unused nodes when importing new geometry</p>
+                        <p class="note-box-content tab">3. Bind geometry in original bind pose</p>
+                        <p class="note-box-content tab">4. Create namespaces to keep imported elements separate</p>
+                    </div>
+                </section>
+                  
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

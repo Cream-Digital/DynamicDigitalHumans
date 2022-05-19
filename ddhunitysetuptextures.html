@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Unity Texture Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./ddhunitysetup.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetupvideo.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreatebuild.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityfbxcombiner.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+                
+                <h2>Setting up textures</h2>
+
+                <p>DDH Tools has its own custom shader editors. If this custom editor for the Head, Hair or Mouth did not import correctly and shows the original editors, then in the Project Menu, navigate to <em>Packages>Dynamic Digital Humans>Shaders>URP>2020</em> and select the appropriate shader. Then either double-click the shader and click <em>Save Asset</em> or right-click the shader and click <em>Reimport</em>.</p>
+
+                <div class="wrapper-doublespace-bottom">
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">- For the Head Shader use <em>DDHHead</em></p>
+                        <p class="note-box-content">- For the Hair Shader use <em>DDHHair</em></p>
+                        <p class="note-box-content">- For the Mouth Shader use <em>DDHHead</em></p>
+                    </div>
+                </div>
+
+                <p>An example of the difference between the original editor and custom DDH Tools editor is shown below.</p>
+
+                <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/1.png" alt="" class="large-image">
+
+                <p>For more information on shaders, click <a href="https://drive.google.com/file/d/16DNpdB_bbAEQwSkN8M4NfqRiE_9Z9EJy/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">here</strong></a>.</p>
+
+                <p>Depending on how the character was imported into Unity, textures may automatically be applied with the desired settings. If the character does not have the right textures, then make changes as needed according to settings shown below.</p>
+
+                <div class="wrapper-space-bottom">
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">For furthur reference on texture settings, watch <a href="https://drive.google.com/file/d/1vrOCWyGPxDWg4xgDVAk6c_sm81dPRsrB/view?usp=sharing"  rel="noopener noreferrer" target="_blank"><strong class="hover-link">this</strong></a> video from 7:26 onwards</p>
+                    </div>
+                </div>
+
+                <div class="wrapper-space-bottom">
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">The specific values used for the texture settings in this section (shown in brackets) and the atlas videos are for the <em>LauraV5_01</em>  model. They can be used for your own character model or adjusted as needed.</p>
+                    </div>
+                </div>
+
+                <p>Open the prefab asset created and change the textures as required.</p>
+
+                <h3>Face</h3>
+                <section>
+
+                    <p>For the face texture, select <em>Head_ Geo</em> in the Hierarchy menu or select the character's head and expand the Face (Material) section. </p>
+
+                    <p class="tab">- Set the shader (DDH/DDHHead)</p>
+                    <p class="tab">- Check if the <em>Atlas Layout</em> and <em>Body</em> parts have been set appropriately</p>
+                    <p class="tab">- Enable <em>Use AO</em></p>
+                    <p class="tab">- Set the Albedo color (white)</p>
+                    <p class="tab">- Adjust <em>Normal Strength</em> to attain the desired level of detail on the face</p>
+                    <p class="tab">- Set the image scale (1)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/2.png" alt="" class="small-image">
+                </section>
+
+                <h3>Eyelash</h3>
+                <section>
+
+                    <p>For the eyelash texture, select <em>Head_Geo</em> in the Hierarchy menu or select the character's head and expand the Eyelash (Material) section.</p>
+
+                    <p class="tab">- Set the Shader (Universal Render Pipeline/Lit)</p>
+                    <p class="tab">- Set the Surface Type (Transparent)</p>
+                    <p class="tab">- Click the circle next to Base Map and set eyelash texture ('Std_Eyelash_Diffuse')</p>
+                    <p class="tab">- Set the Base Map color (black)</p>
+                    <p class="tab">- Set Smoothness to 0.1 </p>
+                    <p class="tab">- Click the circle next to Normal Map and set normal texture ('Std_Eyelash_Normal') </p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/3.png" alt="" class="small-image">
+                </section>
+
+                <h3>Eyeball</h3>
+                <section>
+
+                    <p>For the eyeball texture, select <em>Head_Geo</em> in the Hierarchy menu or select the character's head and expand the Eyeball (Material) section.</p>
+
+                    <p class="tab">- Set the Shader (Universal Render Pipeline/Lit)</p>
+                    <p class="tab">- Click the circle next to Base Map and set eyeball texture (Ga_Eye_L_Diffuse)</p>
+                    <p class="tab">- Set the Base Map color (white)</p>
+                    <p class="tab">- Set Smoothness (1)</p>
+                    <p class="tab">- Set the Workflow Mode (Specular)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/4.png" alt="" class="small-image">
+
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">A custom shader for the eyeballs has also been created. Use either the Universal Render Pipeline/Lit shader or the custom DDHEye shader based on what is needed.</p>
+                    </div>
+
+                    <h4>Custom eye shader</h4>
+
+                    <p class="tab">- Set the Shader (Shader Graphs/DDHEye)</p>
+                    <p class="tab">- Click the circle next to Base Map and set eyeball texture (Ga_Eye_L_Diffuse)</p>
+                    <p class="tab">- Set the Base Map color (E2E2E2)</p>
+                    <p class="tab">- Set Smoothness (1)</p>
+                    <p class="tab">- Click the circle next to Normal Map and set normal (Std_Cornea_R_Iris N)</p>
+                    <p class="tab">- Click the circle next to AO Map and set AO (Mouth AO_test)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/5.png" alt="" class="small-image">
+
+                    
+                </section>
+
+                <h3>Body Skin</h3>
+                <section>
+
+                    <p>For the skin texture, select <em>Body_Geo</em> in the Hierarchy menu or select the character's body and expand the Body_Skin (Material) section.</p>
+
+                    <p class="tab">- Set the Shader (Universal Render Pipeline/Lit)</p>
+                    <p class="tab">- Set Workflow Mode to Specular</p>
+                    <p class="tab">- Set Surface Type to Opaque</p>
+                    <p class="tab">- Click the circle next to Base Map and set skin texture (3_meshes_Merge_Diffuse)</p>
+                    <p class="tab">- Set the Base Map color (LauraV5: E5E5E5; Jasmine V2: C3AAB5)</p>
+                    <p class="tab">- Set Specular Map color (303030)</p>
+                    <p class="tab">- Set Smoothness (0.08) and Source (Albeo Alpha)</p>
+                    <p class="tab">- Click the circle next to Normal Map and set the normal texture ('3_meshes_Merge_Normal') and strength (2)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/6.png" alt="" class="small-image">
+                </section>
+
+                <h3>Clothing</h3>
+                <section>
+
+                    <p>For the clothing texture, select <em>Body_Geo</em> in the Hierarchy menu or select the character's body and expand the Body_Clothing (Material) section.</p>
+
+                    <p class="tab">- Set the Shader (Universal Render Pipeline/Lit)</p>
+                    <p class="tab">- Click the circle next to Base Map and set clothing texture (4_meshes_Merge_Diffsue)</p>
+                    <p class="tab">- Set the Base Map color to (white; FFFFFF)</p>
+                    <p class="tab">- Click the circle next to Normal Map and set the normal texture ('4_meshes_Merge_Normal')</p>
+                    <p class="tab">- Set the Surface Type (Opaque)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/7.png" alt="" class="small-image">
+                </section>
+
+                <h3>Hair</h3>
+                <section>
+
+                    <p>For the hair texture, select <em>Hair_Geo</em> in the Hierarchy menu or select the character's hair and expand the Hair_Ponytail (Material) section.</p>
+
+                    <p class="tab">- Set the Shader (DDH/DDHHair)</p>
+                    <p class="tab">- Click the Select square in Base Map and set hair texture (Hair_Transparency_Diffuse)</p>
+                    <p class="tab">- Click the Select square in AO Map and set AO hair texture (Hair_Transparency_ao)</p>
+                    <p class="tab">- Set Normal Map Texture (None) </p>
+                    <p class="tab">- Set the Base Map color to (white; FFFFFF)</p>
+                    <p class="tab">- Adjust these settings as needed:</p>
+                    <p class="doubletab">- Normal Map Strength (0.6)</p>
+                    <p class="doubletab">- Fresnel Bias (0.45)</p>
+                    <p class="doubletab">- Fresnel Scale (0.6)</p>
+                    <p class="doubletab">- Fresnel Power (7.5)</p>
+                    <p class="doubletab">- Fresnel Color (Brown; 5B3D04)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/8.png" alt="" class="small-image">
+
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">Custom shaders from Unity Auto-setup can also be used for improvements to the hair texture. For more information click <a href="https://forum.reallusion.com/488356/Unity-Auto-Setup" rel="noopener noreferrer" target="_blank"><strong class="hover-link">here</strong></a>.</p>
+                    </div>
+                </section>
+
+                <h3>Mouth</h3>
+                <section>
+
+                    <p>For the mouth texture, select <em>Head_ Geo</em> in the Hierarchy menu or select the character's mouth and expand the Mouth (Material) section. </p>
+
+                    <p class="tab">- Set the shader (DDH/DDHHead)</p>
+                    <p class="tab">- Check if the <em>Atlas Layout</em> and <em>Body</em> parts have been set appropriately</p>
+                    <p class="tab">- Set the Albedo color (white; FFFFFF) and Albedo Intensity (1)</p>
+                    <p class="tab">- Set Specular Strength (0)</p>
+                    <p class="tab">- Set AO Map Texture (Mouth AO_test) with Tiling and Offset: 0.1, 0.5, 0.5, 0.3</p>
+                    <p class="tab">- Enable <em>Use AO</em> and set the AO strength to 1.6</p>
+                    <p class="tab">- Set the image scale (1)</p>
+                    <p class="tab">- Make any other adjustments as needed</p>
+
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpTextures/9.png" alt="" class="small-image">
+                </section>
+                
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Control Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./ddhunitysetup.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetuptextures.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetupvideo.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreatebuild.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityfbxcombiner.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+                
+                <h2>DDH Control Panel</h2>
+                <div class="wrapper-space-top">
+                    <p>There are two versions of the control panel available for the users: one for desktop play and the other for VR play (Both Oculus Link and APK).</p>
+                </div>
+                
+                <h3>Desktop Control Panel</h3>
+                <section>
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/1.png" alt="" class="large-image">
+    
+                    <h3>Features</h3>
+                    <p>1. Animation control buttons: previous, play, pause, stop, next</p>
+                    <p>2. Character changes between character prefabs in Assets/Resources/Avatars folder</p>
+                    <p>3. HDRI Scene change according to the skyboxes available in the Assets/Resources/Materials folder</p>
+                    <p>4. Character rotation through left mouse click with drag</p>
+                    <p>5. Scene rotation through right mouse click with drag</p>
+                    <p>6. Directional light rotation through right and left arrow keys</p>
+                    <p>7. Diffuse ball to show directional light and its relative shadow and the chrome ball showing the reflection of the scene</p>
+                    <p>8. Multiple options for camera placement</p>
+                </section>
+                
+                <h3>VR Control Panel</h3>
+                <section>
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/2.png" alt="" class="large-image">
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/3.png" alt="" class="large-image">
+
+                    <div class="wrapper-space-bottom">
+                        <h3>Features: </h3>
+                        <p>1. Animation playback control</p>
+                        <p>2. Character changes between character prefabs in Assets/Resources/Avatars folder</p>
+                        <p>3. HDRI Scene change according to the skyboxes available in the Assets/Resources/Materials folder</p>
+                    </div>
+                    
+                    <h3>Setup</h3>
+                    <p>1. REPLACE THIS</p>
+                    <p>2. Go to the Project window, and right click within the assets folder and choose Import Package>Custom Package</p>
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/4.png" alt="" class="medium-image">
+
+                    <p>3. Select the Control Panel Unity Package within the local file system and Import</p>
+                    <p>4. Open the Scenes folder and double click on the <em>Control</em> scene file</p>
+                    <p>5. Drag or copy the pre-created character prefabs to be played within the control panel into the Assets>Resources>Avatars folder</p>
+                    <p>6. In the game tab (next to the Scene window tab), enable <em>Maximize On Play</em></p>
+                    <p>7. If the shadows look pixelated, go to the project window, open the Assets folder and open the UniversalRenderPipelineAsset</p>
+
+                    <p class="tab">- If it is a Desktop Control Panel, change the highlighted options and match it to the ones in the image below</p>
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/5.png" alt="" class="medium-image">
+
+                    <p class="tab">- If it is a VR Control Panel, change the highlighted options and match it to the ones in the image below</p>
+                    <img src="./Images/Screenshots/UnitySetup/ControlPanel/6.png" alt="" class="medium-image">
+                </section>
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.</em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

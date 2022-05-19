@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Atlas Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                    <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                </a>  
+
+            </div>
+
+            <div class="navbar-core">
+                
+                
+                <a href="./index.html"><button class="navbar-button" rel="noopener noreferrer">About</button></a>
+
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> The Pipeline</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./character-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Character Creation
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./image-processing.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Image Processing
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./face-animation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Face Animation
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Atlas Creation and Export
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <a href="./ddhunitysetup.html"><button class="navbar-button" rel="noopener noreferrer">Unity Setup</button></a>
+                
+                <a href="./resources.html"><button class="navbar-button" rel="noopener noreferrer">Resources</button></a>
+                
+                <a href="./contact.html"><button class="navbar-button" rel="noopener noreferrer">Contact</button></a>
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+
+                <h2>Atlas creation and export</h2>
+
+                <div class="wrapper-space-top">
+                    <p>
+                        This process creates an atlas video with audio from the retargeted and image processed facial projections for unity to animate with using the DDH After Effects Project.  It also creates a compressed version of the video that optimizes performance during playback in Unity using the preferred H.264 compression.
+                    </p> 
+                </div>         
+
+                <h3>1.1 Assemble reprojected images on an atlas</h3>
+                <section>
+                <div class="wrapper-space-top wrapper-space-bottom">
+                    <p>1. Open the DDH Image Processing template in After Effects and go to <em><Strong>Render Atlas</Strong></em> composition</p>
+                    <p class="doubletab">i. Import image sequences created with the DDH Animation Project in Maya for the combined UV and projection Diffuse, Normal and Specular for the head and mouth texture maps</p>
+    
+                    <img src="./Images/Screenshots/AtlasCreation/1.png" alt="" class="small-image">
+    
+                    <p class="doubletab">ii. Replace appropriate image sequence in scene template</p>
+                    <p class="tripletab">a. Select image in template scene</p>
+                    <p class="tripletab">b. Alt+select sequence in project window and drag over the same image in the scene window</p>
+    
+                    <img src="./Images/Screenshots/AtlasCreation/2.png" alt="" class="small-image">
+                </div>
+                </section>
+
+                <h3>1.2 Spec Composite</h3>
+                <section>
+                    <div class="wrapper-space-top">
+                        <p>Fixes Spec colour to occlude the specular and light from the hairline and provides specular reflectance to the mouth and eye regions.</p>
+                        <p>1. Navigate to the <em><strong>Spec Composite</strong></em> Compostion</p>
+                        <p>2. Replace files that correspond to your new character</p>
+                        <p>3. Adjust specularity for hair to become black and majority of the skin to have an average colour of 0.3 by using the info window (top right) as your source</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/3.png" alt="" class="small-image">
+                    </div>
+                </section>
+
+                <h3>1.3 Mouth Normal Composite</h3>
+                <section>
+                    <div class="wrapper-space-top">
+                        <p>Blurs Mouth Normal to Soften sharp edges of teeth</p>
+                        <p>1.Go to <em><strong>Mouth Normal</strong></em> composite</p>
+                        <p>2. Blur normal map using the effects to remove any sharp edges</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/4.png" alt="" class="small-image">
+                    </div>
+                </section>
+
+                <h3>1.4 Render Atlas</h3>
+                <section>
+                    <div class="wrapper-space-top">
+                        <p>Render either a Diffuse Large or Normal Large depending on your desired character output
+                            (We recommend using a large Normal as normal effects lighting information more clearly in real-time applications and has a potential to add more detail with lighting)
+                        </p>
+
+                        <p>Recommended output settings</p>
+                        <p class="doubletab">i. Quicktime</p>
+                        <p class="doubletab">ii. Apple Prores 422</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/5.png" alt="" class="small-image">
+                    </div>
+                </section>
+
+                <h3>1.5 Compressing video for real-time playback</h3>
+                <section>
+                    <div class="wrapper-space-top">
+                        <p>Uncompressed videos are sometimes large and require encoding and decoding for the game engine when playing back animations.  By using Handbrake we can significantly reduce file sizes, while maintaining a relatively good video for playing back animated details with DDH characters.</p>
+
+                        <p>Download <a href="https://handbrake.fr/" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Handbrake v1.3.2</strong></a></p>
+
+                        <div class="note-box-wrapper wrapper-space-bottom">
+                            <p class="note-box-title">NOTE</p>
+                            <p class="note-box-content">Handbrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs</p>
+                        </div>
+
+                        <h3>Handbrake usage and DDH presets</h3>
+                        <p>Current preferred settings (2022.05.04)</p>
+
+                        <div class="wrapper-space-top">
+                            <p>For our demo scene example, 4K x 2K resolution is the recommended setting for mobile as far as quality to performance ratio. However there are many cases in which 4K will not be the best suited video resolution and may be adjusted to suit your own applications needs.</p>
+                        </div>
+
+                        <p>1. Import custom settings</p>
+                        <p class="doubletab">i. Download <a href="https://drive.google.com/drive/folders/1fdgKw5yp67jWAzyS5BLbc3vlOuYNSUEM?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">DDH Custom Presets</strong></a></p>
+                        <p class="doubletab">ii. Go to <em>Options > Import from file</em></p>
+                        <p class="doubletab">iii. Use <em>Presets > Custom Presets > DDHAtlas4k</em> for VR</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/6.png" alt="" class="medium-image">
+
+                        <p>2. Change preferences</p>
+                        <p class="doubletab">i. Change Output Files to .mp4</p>
+                        <p class="tripletab">a. Go to <em>Tools > Preferences > Output Files</em></p>
+                        <p class="tripletab">b. Enable <em>Always use MP4</em></p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/7.png" alt="" class="small-image">
+
+                        <p>3. Export Compressed Video</p>
+                        <p class="doubletab">i. Select desired output (DDH Atlas 4k Recommended for Unity)</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/8.png" alt="" class="medium-image">
+
+                        <p class="doubletab">ii. Naming Covention</p>
+                        <p class="tripletab">a. character_take_Atlas_1.mp4 (_1 denotes compressed Handbrake version)</p>
+
+                        <p>Select Start Encode (eg. Laura_Replacing_Atlas_1.mp4)</p>
+
+
+                    </div>
+                </section>
+
+                <h3>1.6 Known Limitations (If not usign presets)</h3>
+                <section>
+                    <div class="wrapper-space-top">
+                        <h4>
+                            Video Playback (Constant vs Peak framerate)
+                        </h4>
+
+                        <p>
+                            When using constant frame rate, Handbrake will ensure that the entire video conforms to the specified frame rate. Although Handbrake does not recommend this setting in most typical uses, because the video frame rate is the driver for the animation for the character and we want reliable and predictable delivery of video data, a constant frame rate is preferred.
+                        </p>
+
+                        <p>
+                            When using peak frame rate, Handbrake will use the specified frame rate as the highest potential frame rate for the video. Any sections of the video that fall below or at the specified frame rate will stay at those levels while simultaneously clamping sections that exceed the specified frame rate to the specified frame rate. This is Handbrake's preferred setting as it can be applied in most use cases (especially for general use HDR videos) but is not preferred in our case as we do not necessarily want a lower frame rate (it can result in poorer quality/character fidelity) nor a higher frame rate (it can transfer more data than expected in a given period and negatively affect performance (i.e. CPU via additional unexpected video buffering)).
+                        </p>
+
+                        <p>1. There is a four video playback maximum (at the same time, there will be dropped frames in mobile)</p>
+                        <p class="doubletab">i. This is regardless of the video resolution. Higher resolution than the recommended 4K videos at the same time puts significant load on the GPU and can affect the frame-rate of the experience.</p>
+                        <p>2. No more than 2 x 4K performance videos should be played at a time.</p>
+                        <p>3. No more than 8 x 2K performance videos should be played at a time</p>
+
+                        <p>Using Apple codec/containers (.mp4)</p>
+
+                        <table>
+                            <thead>
+                                <th>Resolution</th>
+                                <th>Sub-4K</th>
+                                <th>4K</th>
+                            </thead>
+
+                            <tbody>
+                                <td>Dimensions</td>
+                                <td>2048 x 1024 (2K)</td>
+                                <td>4096 x 2048</td>
+                            </tbody>
+
+                            <tbody>
+                                <td>Video Codec</td>
+                                <td>H.264</td>
+                                <td>H.265</td>
+                            </tbody>
+
+                            <tbody>
+                                <td>Container</td>
+                                <td>.mp4</td>
+                                <td>.mp4</td>
+                            </tbody>
+
+                            <tbody>
+                                <td>Frame Rate</td>
+                                <td>24</td>
+                                <td>24</td>
+                            </tbody>
+
+                            <tbody>
+                                <td>Audio Codec</td>
+                                <td>AAC</td>
+                                <td>AAC</td>
+                            </tbody>
+                        </table>
+
+                        <h3>Audio Playback</h3>
+
+                        <p>Unless handled explicitly in Unity, multiple audio tracks in the texture atlas may prevent the Unity videoplayer from playing (typically occurs when trying to use a 4K m4v with more than 1 audio track). Thus, for general purposes, ensure that there is only 1 audio track in the resulting texture atlas video.</p>
+
+                        <div class="note-box-wrapper wrapper-space-bottom">
+                            <p class="note-box-title">NOTE</p>
+                            <p class="note-box-content">If there is more than 1 audio track, delete the second track (typically added automatically by Handbrake as an HQ track)</p>
+                        </div>
+
+                        <p>Additionally, when encoding in Handbrake, the original video's audio may be affected by compression (i.e. the resulting audio will sound softer than the original video). To negate this effect, the gain must be adjusted. We have found that 2X output (think 2X volume… but not exactly) generally fixes any issues. If 2X output is too much or too little, refer to the appendix for the gain equation.</p>
+
+                        <h4>Gain</h4>
+
+                        <img src="./Images/Screenshots/AtlasCreation/9.png" alt="" class="small-image">
+
+                        <p>To find the gain necessary for double volume (loosely, output = 2):</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/10.png" alt="" class="small-image">
+
+                        <p>To find the gain necessary for 1.5x volume (loosely, output = 1.5):</p>
+
+                        <img src="./Images/Screenshots/AtlasCreation/11.png" alt="" class="small-image">
+
+                        <p>Handbrake only accepts integers for Gain.</p>
+
+                        <h4>Gain</h4>
+
+                        <p>
+                            Using H.264 to encode videos means living within a max of 4k resolution. Windows 8+, H.264 is supported up to 4096 x 2304 pixels. Windows 7 max is 1920x1088.
+                        </p>
+
+                       <p>More information on <a href="https://docs.microsoft.com/en-us/windows/win32/medfound/h-264-video-decoder" rel="noopener noreferrer" target="_blank"><strong class="hover-link">codecs</strong></a></p> 
+
+                       <p>
+                        H.265 - Unity supports the codec, but the user must install it on their own. The reason for this complexity around H.265 is licensing. Video codec technology is protected with patents/licenses, so when it's included in a product (OS, game, ...) must be licensed for your application.
+                       </p>
+
+                       <p>
+                        VP8 codec - royalty free and works up to 16384 x 16384. But because Unity uses a software implementation, the performance may not match that of hardware-accelerated implementations for H.264/H.265. Android is an exception here, where many devices have a hardware implementation of vp8. Successors of vp8 (namely: vp9 and av1) are also something we have an eye on but haven't yet had time to dig into.
+                       </p>
+
+                       <p>
+                        You'll be able to import 8K content (7680 x 4320) without trouble and get a feel whether the performance level is up to expectations.
+                       </p>
+
+                       <h3>Maximum Video Resolutions for Oculus Quest 2</h3>
+
+                       <p>- Monoscopic: Up to 8192 x 4096 @ 60 FPS 100 Mbit H.265 (HEVC) codec</p>
+                       <p>- Stereoscopic: Up to 5760 x 5760 @ 60 FPS 100 Mbit H.265 (HEVC) codec</p>
+                       <p>- 180 Side by Side: Up to 5760 x 5760 @ 60 FPS 100 Mbit H.265 (HEVC) codec</p>
+
+                       <p>
+                        Since Oculus Quest is released with the XR2 chipset it is now finally possible to playback 8K 60FPS video without any frame drops. Since the display of the Oculus Quest 2 still has a limited pixel density we can also recommend a 7200×3600 @ 60 FPS 100Mbit H.265 (HEVC) video resolution since this leaves room for a little overhead when using spatial audio for example.
+                       </p>
+                    </div>
+                </section>
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

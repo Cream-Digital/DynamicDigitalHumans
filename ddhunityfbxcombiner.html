@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Unity FBX Combiner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./ddhunitysetup.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetuptextures.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetupvideo.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreatebuild.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+
+                <h2>DDH Tool - FBX Combiner</h2>
+
+                <p>FBX Combiner enables combining of the base avatar .fbx file with animation .fbx file(s) and produce one .fbx file </p>
+
+                <p>1. Right click within the folder in which you wish to create the FBXCombiner asset</p>
+
+                <img src="./Images/Screenshots/UnitySetup/FBXCombiner/1.png" alt="" class="medium-image">
+
+                <p>2. Double click on the created asset and in the Inspector enter all the required fields</p>
+                <p class="tab">i. Base Model: drag/find the base .fbx file of the avatar</p>
+                <p class="tab">ii. Output Folder: where to store the created .fbx file with all the animations</p>
+                <p class="doubletab">a.The path can either be manually entered in or chosen with the <em>Select Output Folder</em> button </p>
+                <p class="doubletab">b. After choosing the path with the <em>Select Output Folder</em> button, click anywhere within the Inspector to see the path appear in the Output Folder section </p>
+                <p class="tab">iii. Output Model Name: name the .fbx file (ensure that the name is different than the base .fbx file name)</p>
+                <p class="tab">iv. Number of animations to import: how many animation .fbx files to import with the base avatar</p>
+                <p class="tab">v. Animation FBX & Clip Name: drag/find the animation .fbx to combine </p>
+                <p class="tab">vi. Debug message filter: choose the level of message filter to show on the console</p>
+                <p class="doubletab">a. None</p>
+                <p class="doubletab">b. Low: Logs</p>
+                <p class="doubletab">c. Medium:  Logs and Warnings</p>
+                <p class="doubletab">d. High: Logs, Warnings, and Errors</p>
+                
+                <p>3. After entering all the fields, click <em>Combine FBX</em> and the .fbx file should appear within the output folder path you have selected </p>
+
+                <img src="./Images/Screenshots/UnitySetup/FBXCombiner/1.png" alt="" class="medium-image">
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

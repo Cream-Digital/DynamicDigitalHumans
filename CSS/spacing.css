@@ -1,0 +1,27 @@
+.wrapper-space-top {
+  margin-top: 25px;
+}
+
+.wrapper-doublespace-top {
+  margin-top: 60px;
+}
+
+.wrapper-space-bottom {
+  margin-bottom: 15px;
+}
+
+.wrapper-doublespace-bottom {
+  margin-bottom: 60px;
+}
+
+.tab {
+  padding-left: 20px;
+}
+
+.doubletab {
+  padding-left: 40px;
+}
+
+.tripletab {
+  padding-left: 60px;
+}

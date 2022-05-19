@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Unity Build</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./ddhunitysetup.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetuptextures.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetupvideo.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityfbxcombiner.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html"><button class="navbar-button" rel="noopener noreferrer">Resources</button></a>
+                
+                <a href="./contact.html"><button class="navbar-button" rel="noopener noreferrer">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+                
+
+                <h2>Creating a VR build</h2>
+
+                <p>To view Unity projects within Oculus Quest, an APK (Android Application Package) can be built within Unity, or the Oculus Link can be used to view Unity playmode directly.</p>
+
+                <div class="note-box-wrapper wrapper-space-bottom">
+                    <p class="note-box-title">NOTE</p>
+                    <p class="note-box-content">An Oculus test user developer account is required for this process (ask the appropriate person for one if you do not already have an account). In addition, download the Oculus mobile application and the Oculus PC application.</p>
+                </div>
+
+                <h3>1.1 Android Application Package</h3>
+                <section>
+                    <div class="wrapper-space-bottom">
+                        <p>1. Using the menu bar, navigate to <em>Edit>Project Settings>XR Plug-in Management.</em>Click on the Android tab and check if Oculus has been enabled.
+                        </p>
+                        <p class="tab">- If the Android tab is not present, install the Android module in the Unity version currently being used. Go to Unity Hub, click on the Installs tab, and click the setting button next to the Unity Editor version being used. Go to <em>Add Modules>Platforms>Enable Android Build Support, Android SDK & NDK Tools, Open JDK</em> and click Install.</p>
+        
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/1.png" alt="" class="medium-image">
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/2.png" alt="" class="medium-image">
+        
+                        <p>2. On the top menu, go to <em>File>Build Settings</em>  and choose Android platform. Click on <em>Switch Platform</em>.</p>
+                        <p>3. Turn on the Oculus Quest headset and sign into your test user account.</p>
+                        <p>4. Sign into your test user account on the Oculus mobile app and connect the Oculus Quest by navigating to the Devices tab where the Quest should be selected.</p>
+                        <p>5. Navigate to the Developer Mode tab on the Oculus mobile app and turn on Developer Mode.</p>
+                        <p>6. Connect the Oculus Quest to PC using the Link Cable, allow the PC to access data (in the headset), and check the connection in the Oculus PC application (sign in with test user account)</p>
+                        <p> When the Oculus PC application is first set up, a OVR88948175 error may appear when choosing a default download location for Oculus apps. If this happens:</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/3.png" alt="" class="small-image">
+    
+                        <p class="tab">i. Open the Registry Editor (type “regedit” in the start menu)</p>
+                        <p class="tab">ii. Create the folder structure: HKEY_CURRENT_USER\Software\Oculus VR, LLC\Oculus\Libraries\</p>
+                        <p class="tab">iii. Right click the Software folder in HKEY_CURRENT_USER and select New > Key to create a new folder. Rename the folder to “Oculus VR, LLC”</p>
+                        <p class="tab">iv. Repeat Step iii for the Oculus and Libraries folder</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/4.png" alt="" class="medium-image">
+    
+                        <p>7. If the Oculus Quest is connected to the PC, it should appear in the Devices tab</p>
+                        <p>8. The cable connection can be further tested by selecting the Oculus Quest in the Devices tab and running an USB test</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/5.png" alt="" class="medium-image">
+    
+                        <p>9. When connected, in the Build Settings, click <em>Refresh</em> next to Run Device. If Oculus is successfully connected, it should appear within the drop-down menu. Choose the Oculus Quest as the run device.</p>
+                        <p class="tab">- If the Run Device is grayed out, make sure to install Android SDK & NDK Tools and OpenJDK Modules from Unity (Refer to Step 1)</p>
+                        <p>10. Make sure that <em>Development Build</em> is enabled.</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/6.png" alt="" class="medium-image">
+    
+                        <p>11. Click on Player Settings… below the platform list. In Other Settings > Rendering > Color Space, change to Linear if set to Gamma. (Refer to figure below)</p>
+                        <p>12. In Other Settings > Identification > Minimum API Level, check if the level is higher than 23. If not, change it to <em>Android 6.0 Marshmallow (API level 23)</em>. (Refer to figure below)</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/7.png" alt="" class="large-image">
+    
+                        <p>13. In the SampleScene, delete the Main Camera. Then, in the Projects menu, go to <em>Assets>Oculus>VR>Prefabs>OVRCameraRig</em> and drag the OVRCameraRig into the SampleScene and fix the angle as needed.</p>
+    
+                        <p>14. On the top menu, go to <em>File>Build Settings</em> and click <em>Build and Run</em>.</p>
+    
+                        <p>15. Wear the Oculus Quest Headset, and if the prompt regarding USB Debugging appears, click OK.</p>
+    
+                        <img src="./Images/Screenshots/UnitySetup/CreateVRBuild/8.png" alt="" class="small-image">
+    
+                        <p>16. The scene will either play immediately or in the Apps menu, click on the drop-down menu with <em>All</em> and choose <em>Unknown Sources</em>. The Unity project should be present to play.</p>
+    
+                        <p>17. To exit the scene, click the Oculus button on the right controller to bring up the virtual menu and return to the Home screen.</p>
+    
+                        <div class="note-box-wrapper">
+                            <p class="note-box-title">NOTE</p>
+                            <p class="note-box-content">To improve the framerate, go to <em>Edit>Project Settings>XR Plugin-Management>Oculus</em> and change the Desktop: Stereo Rendering Mode to <em>Single pass instanced</em> and Android: Stereo Rendering Mode to <em>Multiview</em></p>
+                        </div>
+                    </div>
+                </section>
+
+                <h3>1.2 Oculus Link</h3>
+                <p>For Information on viewing the Unity project with the Oculus Link, visit this <a href="https://docs.google.com/document/d/104-mKzRJSgEUA4kQkzZht5ybGtxzeGft/edit?usp=sharing&ouid=112694310099982225742&rtpof=true&sd=true" rel="noopener noreferrer" target="_blank"><strong class="hover-link">link</strong></a> and view from page 17</p>
+
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

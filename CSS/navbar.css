@@ -1,0 +1,175 @@
+.navbar {
+  height: 100%;
+  width: 330px;
+  background-color: rgb(2, 2, 2);
+  color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.navbar-header {
+  display: grid;
+  width: 1fr;
+  background-color: #ff002b;
+
+  justify-content: center;
+}
+
+.navbar-header-title {
+  display: inline-flex;
+  width: 170px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-self: center;
+  justify-content: center;
+}
+
+.ddh-icon {
+  width: 140px;
+  height: 40px;
+  margin: 0;
+}
+
+.ddh-icon:hover {
+  filter: sepia(100%) saturate(0%) brightness(0%);
+}
+
+.navbar-header-text {
+  width: 1fr;
+  justify-self: center;
+  font-weight: bold;
+  font-size: 18px;
+  height: 20px;
+}
+
+.navbar-searchbar {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+}
+
+.navbar-core {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.core-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.core-content-body {
+  display: flex;
+  flex-direction: column;
+  width: 61%;
+  height: 100%;
+  color: black;
+  margin-left: 400px;
+  margin-top: 0px;
+}
+
+.core-content-footer {
+  width: 60%;
+  height: 20px;
+  color: black;
+  margin-left: 400px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  font-size: 15px;
+  background-color: white;
+}
+
+.navbar-button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: rgb(2, 2, 2);
+  color: whitesmoke;
+  text-align: left;
+  padding-left: 35px;
+}
+
+.navbar-button:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+.navbar-list-button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: rgb(192, 192, 192);
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding-left: 35px;
+}
+
+.navbar-list-button:hover {
+  background-color: rgb(32, 32, 32);
+  color: whitesmoke;
+}
+
+.navbar-list-button-selected {
+  width: 1fr;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-list-selection {
+  width: 300px;
+  margin-left: 30px;
+  list-style-image: url("../Images/DownArrow.png");
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar-current-page {
+  background-color: rgb(73, 73, 73);
+  color: whitesmoke;
+}
+
+#non-header-title {
+  font-style: normal;
+  font-size: 17px;
+}
+
+#home-page-core-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: black;
+  margin-left: 400px;
+  margin-top: 0px;
+}
+
+#about-page-navbar-selection {
+  width: 300px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+#about-page-navbar {
+  margin: 0;
+}

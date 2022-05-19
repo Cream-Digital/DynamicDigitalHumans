@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Unity Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetuptextures.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetupvideo.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreatebuild.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityfbxcombiner.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+
+                <h2>Unity Tool Initial Setup</h2>
+
+                <p>This section outlines the steps to import the DDH tools package, importing/exporting avatars, playing avatar animations and exporting to the Oculus Quest using the Unity Engine.</p>
+
+                <div class="wrapper-doublespace-bottom">
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">For a video tutorial on setting up the DDH tools for Unity, visit the <a href="./resources.html" rel="noopener noreferrer"><strong class="hover-link">Resources</strong></a> page</p>
+                    </div>
+                </div>
+                
+                <p>1. Clone or download the <a href="https://github.com/Cream-Digital/DDH-Tool" rel="noopener noreferrer" target="_blank"><strong class="hover-link">DDH Tools Repository</strong></a></p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/1.png" alt="" class="small-image">
+
+                <p>2. Go to <a href="https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022#publisher" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Oculus Integration</strong></a> and click <em>Add To My Assets</em></p>
+                <p>3. Create a new 3D project in Unity</p>
+                <p>4. Open the package manager in the editor (<em>Windows->Package Manager</em>)</p>
+                <p>5. Click the '&#43;' button in the top left corner and choose <em>Add package from disk</em></p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/2.png" alt="" class="small-image">
+
+                <p>6. Locate the DDH_Tools folder that was cloned/downloaded from the cloud repository and open the <em>package.json</em>file within it.</p>
+                <p>7. In the package manager window, go to 'Packages: ' drop-down menu in the top left and switch from <em>In Project</em> to <em>My Assets</em></p>
+                <p>8. Oculus Integration should be present if step 2 has been completed. Download and import the package.</p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/3.png" alt="" class="small-image">
+
+                <p>9. If the Oculus Integration package has been successfully imported, an Oculus folder should appear in the Assets folder of the project.</p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/4.png" alt="" class="small-image">
+
+                <p>10. In the Unity Editor, go to the menu bar and navigate to <em>Edit->Project Settings->XR Plugin Management</em> and click install. After installation, choose <em>Oculus</em> in both the Desktop and Android tabs.</p>
+
+                <p>11. Using the menu bar, navigate to <em>Windows->Package Manager->'Packages: ' drop-down menu</em> and select the <em>Unity Registry</em> option. Search for Universal RP and install it.</p>
+
+                <p>12. Open the Assets folder in the project, right-click in the space, navigate to Create->Rendering->Universal Render Pipeline (URP) and create a <em>Pipeline Asset (Forward Renderer)</em> asset.</p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/5.png" alt="" class="small-image">
+
+                <p>13. Using the menu bar, open the project settings (<em>Edit->Project Settings</em>). In the Graphics section, change the <em>Scriptable Render Pipeline Settings</em> from None to URP.</p>
+
+                <p>14. In the Player tab of the project settings, navigate to <em>Other Settings->Rendering->Color Space</em> and change the color space from Gamma to Linear</p>
+
+                <img src="./Images/Screenshots/UnitySetup/InitialSetup/6.png" alt="" class="small-image">
+
+
+                
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

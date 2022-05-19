@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Face Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                    <img src="Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                </a>  
+
+            </div>
+
+            <div class="navbar-core">
+                
+                
+                <a href="./index.html"><button class="navbar-button" rel="noopener noreferrer">About</button></a>
+
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> The Pipeline</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./character-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Character Creation
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./image-processing.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Image Processing
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Face Animation
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./atlas-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Atlas Creation and Export
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <a href="./ddhunitysetup.html" rel="noopener noreferrer"><button class="navbar-button">Unity Setup</button></a>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+
+                <h2>DDH Face Animation</h2>
+
+                <p>
+                This process generates the facial performance that combines the animation of the facial geometry with the playback of the image processed video on top of it. It also combines the performance projection and UV image together by fixing it onto the head and mouth geometry.
+                </p> 
+
+                <h3>1.1 Setting up textures for DDH</h3>
+                <section>
+
+                    <p>1. Import DDH Head and DDH Mouth</p>
+                    <p class="tab"><a href="https://drive.google.com/file/d/1nxzhLwk4OmjbPdlAEgv9quIRp1_FSiX5/view?usp=sharing" rel="noopener noreferrer" target="_blank">- <strong>Download DDH Material File</strong></a></p>
+
+                    <p>2. Assign DDH Head display material to <em>Head_Geo</em></p>
+                    <p>3. Assign DDH Mouth display material to <em>Mouth_Geo</em></p>
+                    <p>4. Position UV projection (of the DDH face projection video) to fit the eyes and forehead</p>
+                    <p class="tab">- Make visible and assign head projection texture that was generated in After Effects</p>
+                    <p class="tab">- Render head projection file</p>
+                    <p>5. When creating a new character, save a .jpeg file of the neutral position (from step 2) and use that as the alignment position for the projector</p>
+                </section>
+
+                <h3>1.2 Faceware retargeting</h3>
+                <section>
+
+                    <p>1. Download and install FaceWare Pro (to use AI pose database tools)</p>
+                    <p class="tab">i. Open Faceware Retargeter</p>
+                    <p class="tab">ii. Go to Faceware->Advanced->Character setup->New</p>
+                    <p class="doubletab">a. Name the character Laura V5</p>
+                    <p class="doubletab">b. Delete Head_Params from Face Groups</p>
+                    <p class="doubletab">c. Select mouth in Face Groups</p>
+                    <p class="tripletab">- Click Rig controls </p>
+                    <p class="tripletab">- Select head blendshapes </p>
+                    <p class="tripletab">- Click Update to select nodes that control the mouth</p>
+                    <p class="tripletab">- Click Add Selected</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/1.png" alt="" class="small-image">
+                    <img src="./Images/Screenshots/FaceAnimation/2.png" alt="" class="medium-image">
+
+                    <p class="doubletab">d. Select <em>CC_Base_JawRoot</em> bone</p>
+                    <p class="tripletab">- Click Update in Rig Controls</p>
+                    <p class="tripletab">- Select rotation values from Rig Controls</p>
+                    <p class="tripletab">- Click add selected </p>
+                    <p class="tripletab">- Select values in Rig Controls and set default values </p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/3.png" alt="" class="small-image">
+
+                    <p class="doubletab">e. Select the eyes in Face Groups</p>
+                    <p class="tripletab">- Select eye blend shapes in Rig Controls and click update</p>
+                    <p class="doubletab">f. Select both (L/R) eye bones</p>
+                    <p class="tripletab">- Click Update in Rig Controls </p>
+                    <p class="tripletab">- Highlight rotation values and click Add Selected</p>
+                    <p class="tripletab">- Click Set Default Values in Rig Controls </p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/4.png" alt="" class="medium-image">
+
+                    <p class="doubletab">g. Select eyebrows in Face Groups</p>
+                    <p class="tripletab">- Select Head Geo and click Update in Rig Controls</p>
+                    <p class="tripletab">-Highlight eyebrows shapes and click Add Selected</p>
+
+                    <p class="tab">iii. Save file using the naming convention <em>Faceware/[CharacterName_CharacterSetup]</em></p>
+                    <p class="tab">iv. Close Character Setup</p>
+
+                    <p>2. Faceware/Character Setup</p>
+                    <p class="tab">i. Create Shared Poses</p>
+                    <p class="doubletab">a. Go to Advanced->Preferences->Create (if this is the first time)</p>
+                    <p class="doubletab">b. Create a directory in the Faceware folder</p>
+                    <p class="doubletab">c. Create a <em>shared_poses.fwsp</em> file</p>
+                    <p class="doubletab">d. Click use Shared poses when retargeting</p>                  
+
+                    <img src="./Images/Screenshots/FaceAnimation/5.png" alt="" class="small-image">
+
+                    <p class="tab">ii. Go to Performance->Open</p>
+                    <p class="doubletab">a. Select performance file (FWR analyzer file)</p>
+                    <p class="doubletab">b. Select character setup file</p>
+                    <p class="doubletab">c. Select Shared Poses database</p>
+                    <p class="doubletab">d. Enable <em>Import video and audio</em> and click OK</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/6.png" alt="" class="small-image">
+
+                    <p class="tab">iii. Move Faceware video besides the face mesh</p>
+                    <p class="doubletab">a. Replace video with video results to display tracking information</p>
+                    <p class="tripletab">- This helps identify if there are issues with the analyzer vs tracking part of the process </p>
+                    <p class="doubletab">b. Scale the face video to match the size of the head mesh</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/7.png" alt="" class="small-image">
+                </section>
+
+                <h3>1.3 Setting up textures</h3>
+                <section>
+
+                    <p>1. Locate <em>DDH Head_Projection</em> and <em>DDH Fill_Projection</em> textures that were generated in the image processing step</p>
+                    <p>2. Select <em>DDH Head_Projection</em> and assign it to the character's head</p>
+                    <p>3. Select the file and switch to the new projection take from the attributes editor</p>
+                    <p class="tab">i. Right click and refresh swatch</p>
+                    <p class="tab">ii. Scrub through the animation and ensure that the animations match</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/8.png" alt="" class="medium-image">
+
+                    <p>4. Assign <em>DDH Head_Projection</em> to the eyes</p>
+                    <p class="tab">i. Select the eyes by clicking on faces</p>
+                    <p class="doubletab">a. For the first character</p>
+                    <p class="tripletab">- Create layered shader and name it <em>DDH_Eye</em></p>
+                    <p class="tripletab">- Map head projection to <em>DDH_Eye</em></p>
+                </section>
+
+                <h3>1.4 Retargeting</h3>
+                <section>
+
+                    <p>1. Change camera focal length to 60</p>
+
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">Make sure your animation start time matches the Faceware Analyzer asset's imported animation frame (0 or 1) </p>
+                    </div>
+
+                    <p>2. Animate the eyes</p>
+                    <p>3. Open the Shape editor</p>
+                    <p class="tab">i. Select the eye joints and rotate them to match the correct eye position</p>
+                    <p class="tab">ii. Animate morph targets</p>
+                    <p class="doubletab">a. Start with large movements and then move on to the more granular movements</p>
+                    <p class="doubletab">b. In Faceware Poses, select poses with greater changes</p>
+                    <p class="doubletab">c. Label poses in the description section with accurate names (for use with shared poses)</p>
+                    <p class="doubletab">d. Navigate to the shared poses shelf and select all shared poses to use the poses that were already stored</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/9.png" alt="" class="small-image">
+
+                    <p class="doubletab">e. Turn selection highlighting off to get a better view of the textures</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/10.png" alt="" class="small-image">
+
+                    <p>4. Animate the eyebrows</p>
+                    <p class="tab">i. Turn on selection highlighting to follow contour of polygons</p>
+                    <p class="tab">ii. Use A (Morph shapes first) tweak positions with older morph targets</p>
+                    <p class="tab">iii. Use Prune and Smoothing to remove jitters</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/11.png" alt="" class="small-image">
+
+                    <p>5. Animate the mouth</p>
+                    <p class="tab">i. Start with Jaw shape positions</p>
+                    <p class="tab">ii. Reposition the mouth to fit the shapes</p>
+                    <p class="tab">iii. Animate the details</p>
+                    <p class="tab">iv. Use A (Morph shapes first) tweak positions with older morph targets</p>
+                    <p class="tab">v. Use Prune and Smoothing to remove jitters</p>
+                    <p class="tab">vi. Click Retarget to animate the in-betweens</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/12.png" alt="" class="small-image">
+
+
+
+                </section>
+
+                <h3>1.5 Use projected image for image processing rendering</h3>
+                <section>
+
+                    <p>1. Open Hypershade</p>
+                    <p>2. Select <em>DDH Head_Projection</em> material</p>
+                    <p>3. Import <em>HeadProjection_Fill</em> and replace sequence</p>
+                    <p class="tab">i. Create file texture node</p>
+                    <p class="tab">ii. Load the HeadProjection_Fill sequence</p>
+                    <p class="tab">iii. Enable <em>Use Image Sequence</em></p>
+                    <p>4. Connect to image input</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/13.png" alt="" class="medium-image">
+
+                    <p>5. Break connection of the mouth mask</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/14.png" alt="" class="medium-image">
+
+
+                </section>
+
+                <h3>1.6 Rendering geometry to texture</h3>
+                <section>
+
+                    <p>1. Select the DDH Image Processor and render geometry to texture from Maya shelf</p>
+                    <p>2. Select <em>Head_Geo</em> from the outliner and click Add Geometry</p>
+                    <p>3. Remove other associated geometry (Head_GeoShapeOrig1)</p>
+                    <p>4. Rename the head</p>
+                    <p>5. Change the resolution to 2048</p>
+                    <p class="tab">i. Enable Extend Edges</p>
+                    <p class="tab">ii. Enable Generate Normal Map and use default settings</p>
+                    <p class="tab">iii. Enable Generate Specular Map and use default settings</p>
+                    <p>6.Change the step count to a high number to test a few frames (for the first time)</p>
+                    <p>7. Change the output directory to <em>DirectoryWhereMayaIsStored\images\Takes\NameOfTake</em> and click Bake</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/15.png" alt="" class="small-image">
+
+                    <p>8. Select <em>Mouth_Geo</em> from the outliner and click Add Geometry</p>
+                    <p class="tab">i. Remove other associated mouth geometry (Mouth_GeoShapeOrig1)</p>
+                    <p>9. Rename the Mouth</p>
+                    <p>10. Change resolution to 512</p>
+                    <p class="tab">i. Enable Extend Edges</p>
+                    <p class="tab">ii. Enable Generate Normal Map and set blur to 50</p>
+                    <p>11. Change the step count to a high number to test a few frames (for the first time)</p>
+                    <p>12. Once the frames are verified, change the frame range options to <em>Step by 1</em> and click Bake</p>
+                </section>
+                
+                <h3>1.7 Export the head animation to Unity Engine</h3>
+                <section>
+                    <p>1. Bake animations from expressions</p>
+                    <p class="tab">i. Select the mouth geometry and blendshapes input nodes</p>
+                    <p class="tab">ii. Open the graph editor</p>
+                    <p class="doubletab">a. Select curves and bake the animation</p>
+
+                    <img src="./Images/Screenshots/FaceAnimation/16.png" alt="" class="large-image">
+
+                    <p>2. Export geometry for facial animation</p>
+                    <p class="tab">i. Select the geometry you want to export to Unity</p>
+                    <p class="doubletab">a. Include the head and mouth geo</p>
+                    <p class="tab">ii. Select the root bone</p>
+                    <p class="tab">iii. Export to FBX</p>
+                    <p class="doubletab">a. Enable animations</p>
+                    <p class="doubletab">b. Enable deformed models (skins and blendshapes)</p>
+                </section>
+               
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

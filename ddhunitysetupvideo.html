@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Unity Video Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                        <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                    
+                </a>  
+
+
+
+            </div>
+
+            <div class="navbar-core">                
+
+                <a href="./index.html" rel="noopener noreferrer">
+                    <button class="navbar-button">About</button>
+                </a>
+            
+
+
+                <a href="./character-creation.html" rel="noopener noreferrer">
+                    <button class="navbar-button">The Pipeline</button>
+                </a>
+                
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> Unity Setup</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./ddhunitysetup.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Initial Setup
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./ddhunityimportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Importing The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreateprefab.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating An Avatar Prefab
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitysetuptextures.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Setting Up Textures
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Setting Up Video Animations
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityexportavatar.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Exporting The Avatar
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunitycreatebuild.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Creating a VR build
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhcontrolpanel.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH Tool Control Panel
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./ddhunityfbxcombiner.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                DDH FBX Combiner
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+                
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+                
+
+                <h2>Setting up video animations</h2>
+                <section>
+
+                    <p>1. Navigate to the video animations chosen during prefab creation in the Project Menu by going to <em>Assets>Resources>DDH_Avatars>LauraV5>LauraV5_Rigs>VideoAnimations</em></p>
+                    <p>2. For each animation, in the Inspector menu, if the Static Image has not been automatically set, change the Static Image from <em>None</em> to the screen capture taken during Step 8 of <em>Creating An Avatar Prefab</em></p>
+                    <p>3. Also, change the Atlas Video Clip from <em>None</em> to the appropriate video clip (video clip should match the atlas layout (normal or albedo map) of the static image chosen)</p>
+                    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/1.png" alt="" class="medium-image">
+    
+                    <p>4. In the Project Menu, go to <em>Assets>Resources>DDH Avatars>LauraV5>Animations</em>. For the animations that were chosen during the prefab creation, click on the corresponding .fbx animation file. In the Inspector menu, click the <em>Rig</em> tab and change the Animation Type to <em>Humanoid</em> and change the Avatar Definition to <em>Copy from other avatar</em>. 
+                        
+                    <p>A Source setting will appear; change the Source from <em>None</em> to the Avatar created (ex. LauraV5_01Avatar). Click Apply to set changes. Repeat this step for all animation files chosen</p></p>  
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/2.png" alt="" class="medium-image">
+    
+                    <p>5. If you are not already in the SampleScene, return to it by clicking the back arrow in the Hierarchy menu</p>
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/3.png" alt="" class="medium-image">
+    
+                    <p>6. In the Project Menu, navigate to <em>Assets>Resources>DDH_Avatars>LauraV5>LauraV5_Rigs</em>, select the Prefab Asset created and drag it into the SampleScene </p>
+    
+                    <p>7. Click on the Prefab Asset in the SampleScene. In the Inspector menu, under DDH Video Animation Controller (Script), click <em>Refresh Animations List</em>. Expand the <em>Avatar Animations</em> option to view the animations.</p>
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/4.png" alt="" class="medium-image">
+    
+                    <p>8. Change the Audio Playback Mode from <em>Spatialized</em> to <em>Direct</em> </p>
+    
+                    <p>9. Adjust the angle and position of the character model to the desired view that will be shown when animations are played. Lighting settings can be adjusted by selecting <em>Directional Light</em> in the Hierarchy menu. Adjust the settings as needed (ex: turning of shadows by setting Shadow Type to <em>No Shadows</em>)</p>
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/5.png" alt="" class="medium-image">
+    
+                    <p>10. Press the Play button at the top of the screen to launch the scene</p>
+    
+                    <p>11. Unity will automatically switch to the Game tab. Switch back to the Scene tab</p>
+    
+                    <p>12. In the Hierarchy menu, select the Prefab Asset</p>
+    
+                    <p>13. In the Inspector menu, under DDH Video Animation Controller (Script), click <em>Play Current Animation</em> to play the first animation in the Avatar Animations list (Element 0). Click <em>Change Current Animation</em> to move to the next animation</p>
+    
+                    <p>14. The animation that will be played when <em>Play Current Animation</em> is clicked and displayed under <em>Current Animation</em> in the DDH Animation And Video Sync (Script)</p>
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/6.png" alt="" class="medium-image">
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/7.png" alt="" class="small-image">
+    
+                    <p>15. If an animation does not seem to be synced properly, in the Project Menu, go to <em>Assets>Resources>DDH_Avatars>LauraV5>LauraV5_Rigs>VideoAnimations</em> and select the specific animation and adjust the Animation Offset as needed</p>
+    
+                    <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/8.png" alt="" class="small-image">
+                </section>     
+
+                <h2>Validation</h2>
+                <section>
+
+                    <p>After setting the video animations, validate the Unity playback by using the video sequence from faceware retargeter. This step ensures that the animations are being correctly played within Unity.</p>
+                    
+                    <p>Validate Animations with these links to animation reviews:</p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/1Sx1SAhjFaDUIyfOCDUPVD66aSj1cCu5K/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Droids Animation</strong></a></p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/19BDc6z3Ubh9O5H5UUlqGlvN5chzg1ePJ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Excitement Animation</strong></a></p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/1DaHSNRKWlaNE53mPZuIRtbcKpbI-G3iI/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Flirt Animation</strong></a></p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/17J79CqcYf9Vty07jUkZ8aPPb-kZOMC3y/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Killer Animation</strong></a></p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/14O2egQD2pcdSkF2src_5QMP4Z2af0efQ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Neutral Animation</strong></a></p>
+                </section>              
+
+                <h2>Adding new video animations</h2>
+                <section>
+
+                <p>If additional video animations are created within the Video Animations directory <em>after</em> the avatar prefab has been created, ensure to name the Video Animation as per their animation name.</p>
+
+                <p>1. Within the Video Animations directory, right click, Create > DDH > Animation > Video Animation</p>
+
+                <img src="./Images/Screenshots/UnitySetup/SettingUpVideo/9.png" alt="" class="medium-image">
+
+                <p>2. Rename the Video Animation in accordance with the animation clip name</p>
+
+                <p>3. Drag/search for the Face and Mouth materials, Animation Clip, Static Image, and Atlas Video Clip required for the avatar's video animation </p>
+
+                <p>4. Select the avatar prefab and in the Inspector menu, click <em>Refresh Animation List</em> under the DDH Video Animation Controller script and the new Video Animation should appear within the Avatar Animations list</p>
+                </section>
+                
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

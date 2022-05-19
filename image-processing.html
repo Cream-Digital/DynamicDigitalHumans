@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-Image Processing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/elements.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/spacing.css">
+    <link rel="icon" href="./Images/Icons/DDHfavicon.ico">
+
+</head>
+<body class="home-page-body">
+    
+    <div class="home-page-base">
+
+        <div class="navbar">
+            
+            <div class="navbar-header">
+  
+                <a href="./index.html" class="navbar-header-title" rel="noopener noreferrer">
+                    
+                    <img src="./Images/DDHLogoAlt.webp" alt="DDHIcon" class="ddh-icon">
+                </a>  
+
+            </div>
+
+            <div class="navbar-core">
+                
+                
+                <a href="./index.html" rel="noopener noreferrer"><button class="navbar-button">About</button></a>
+
+                <ul>
+                    <li class="navbar-list-selection">
+                        <p href="#" class="navbar-list-button-selected"> The Pipeline</p>
+                    </li>
+
+
+                    <li>
+                        <a href="./character-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Character Creation
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" rel="noopener noreferrer">
+                            <button id="navbar-current-page" class="navbar-list-button">
+                                Image Processing
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./face-animation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Face Animation
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./atlas-creation.html" rel="noopener noreferrer">
+                            <button class="navbar-list-button">
+                                Atlas Creation and Export
+                            </button>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <a href="./ddhunitysetup.html" rel="noopener noreferrer"><button class="navbar-button">Unity Setup</button></a>
+                
+                <a href="./resources.html" rel="noopener noreferrer"><button class="navbar-button">Resources</button></a>
+                
+                <a href="./contact.html" rel="noopener noreferrer"><button class="navbar-button">Contact</button></a>
+
+            </div>    
+            
+        </div>
+
+        <div class="core-content-wrapper">
+
+            <div class="core-content-body">
+                <h1>Dynamic Digital Humans Documentation</h1>
+                <h2>Image Processing</h2>
+
+                <p>This process creates the facial projection using an After Effects Template for Maya to animate with. It also creates the textures that combine the projection and UV together to create the final UV video atlas that will be used in game engines.</p>
+
+                <h3>1.1 Shooting and conforming video footage</h3>            
+                <section>
+                    <p>1. Import head-mounted camera (HMC) video footage</p>
+                    <section>
+                        <p class="tab">i. Import your HMC footage into any video editing software (Premiere, Final Cut Pro, etc.)</p>
+                    </section>
+                    
+    
+                    <p>2. Select and export your clips</p>
+                    <section>
+                        <p class="tab">i. Select the shots you would like to keep. This is where the editorial choices are made by a client, if applicable.</p>
+                        <p class="tab">ii. Review the selection and make sure that the footage is clean, in focus, and that each shot starts and ends with a neutral pose.</p>
+                        <p class="tab">iii. Export the selected clips with the following settings:</p>
+                        <p class="doubletab">- Include Range of Motion (ROM)</p>
+                        <p class="doubletab">- Trim all footage to desired length for performances</p>
+                        <p class="doubletab">- Format: 1080p (full frame, at max resolution)</p>
+                        <p class="doubletab">- Codec: H265, Prores 422 or uncompressed</p>
+                        <p class="doubletab">- Final edited framerate: 24 (looks more cinematic and is faster to process and animate)</p>
+                        <p class="doubletab">- Grade footage to maintain stable lighting and color balance</p>
+                        
+                        <div class="wrapper-doublespace-top wrapper-doublespace-bottom">
+                            <div class="note-box-wrapper">
+                                <p class="note-box-title">NOTE</p>
+                                <p class="note-box-content tab">- Apply same grade for entire facial capture production to ensure colors and conformed properly throughout (use color chart)</p>
+                                <p class="note-box-content tab">- Link to <a href="https://www.dynamicdigitalhumans.com/shoot-instructions" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Reference shooting best practices</strong></a></p>
+            
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <h3>1.2 Pipeline Production Outline</h3>
+                <section>
+                    <p>This outline describes the optimal way to work with a production team to analyze, stabilize, retarget and animate characters efficiently.  By using this workflow you can use unstabilized videos in your workflow and stabilize during creation.</p>
+    
+                    <img src="./Images/Screenshots/ImageProcessing/1.png" alt="" class="small-image">
+                </section>
+                
+                <h3>1.3 Install required software and tools</h3>
+                <section>
+                    
+                    <p>The various software and tools required are listed below. Download the following to install the complete pipeline.</p>
+
+                    <div class="wrapper-doublespace-bottom">
+                        <p>- Maya 2020</p>
+                        <p>- Faceware Pro - For production settings (shared poses)</p>
+                        <p>- Adobe Photoshop and After Effects</p>
+                        <p>- Unity 2020</p>
+                        <p>- Unreal 4.27 (not tested in Unreal 5 yet)</p>
+                        <p>- <a href="https://drive.google.com/file/d/1v0k2Mu6ia2GDLE3F3ZV0idkQkiXyymRF/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">DDH Image Processor Plugin</strong></a> (2021.08.19)</p>
+                    </div>
+                    
+
+                    <div class="wrapper-doublespace-bottom">
+                        <h4>Install DDH Image Processor Plugin</h4>
+                        <p>1. In the downloaded folder, find the tile <em>install_admin.bat</em>, right click on it and run as administrator</p>
+                        <p>2. Follow the instructions in the installer window</p>
+                        <p>3. When the installer succeeds, it will have installed several Maya scripts and an After Effects plugin.</p>
+                    </div>
+
+                    <div class="wrapper-doublespace-bottom">
+                        <h4>Download Maya Character Template Project</h4>
+                        <p>The following is a character file to test the DDH image processor in Maya</p>
+                        <p>- <a href="https://drive.google.com/file/d/1ojecSKnyR04Oh2aSRzFcBPpOzqQSiOzZ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Character File</strong></a> (Maya template)</p>
+                        <p>- <a href="https://drive.google.com/file/d/1BFKtLq3U1nFiGdkHyzQXMWrJmMlmMpHa/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Laura Character</strong></a> (Maya character)</p>
+                    </div>
+
+                    <h4>Download Faceware Analyzer (standalone)</h4>
+                    <p>- Analyze edited footage, paying extra attention to the inside of the mouth</p>
+                    <p>- Export xml of landmark positions</p>
+                    <p class="tab">- <a href="#" rel="noopener noreferrer">ADD LINK- Faceware Analyzer Documentation</a></p>
+                    <p class="tab">- <a href="https://drive.google.com/file/d/1-5075uMINazyn5z9G9KJPDHQ0qJ4uW2v/view?usp=sharing" rel="noopener noreferrer"  target="_blank"><strong class="hover-link">Laura Droids Analyzer Exmaple</strong></a></p>
+                    <p>- Export facial landmarks burnt into image sequence</p>
+
+                </section>
+
+                <h3>1.4 After Effects Template Project</h3>
+                <section>
+                    <div class="wrapper-doublespace-bottom">
+                        <div class="note-box-wrapper">
+                            <p class="note-box-title">RESOURCES</p>
+                            <p class="note-box-content tab">Link to <a href="https://drive.google.com/file/d/1sDC5dJWASwd1MkLl7UNgFbu9U8420Wm_/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">After Effects DDH Template Walkthrough</strong></a></p>
+                            <p class="note-box-content tab">Link to <a href="https://drive.google.com/drive/folders/14ICG9-5JD2C3-FULnFGV5xqHAgl6uX0J?usp=sharing" rel="noopener noreferrer" target="_blank"><strong class="hover-link">After Effects DDH Image Processor Project</strong></a></p>
+                        </div>
+                    </div>
+
+                    <h4>Project Settings (setup for new users)</h4>
+                    <p>1. Download DDH Image Processor Project and follow the walkthrough video</p>
+                    <p>2. Open After Effects</p>
+                    <p>3. In the project settings, change time and display to <em>frames</em> and disable the use of <em>feet and frames</em></p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/2.png" alt="" class="small-image">
+
+                    <p>4. Establish frame length</p>
+                    <p class="tab">i. Import new video into the Projects/Media folder</p>
+                    <p class="tab">ii. Select the imported video in the project bin and set the frame length to the new imported clip length</p>
+                    <p class="tab">iii. Select all the compositions in the <em>Workflow</em> folder under your <em>Project</em> menu</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/3.png" alt="" class="small-image">
+
+                    <p>5. Navigate to <em>File/Scripts</em>, where the scripts should be loaded, and select <em>DDH_Duration_Setter.jsx</em></p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/4.png" alt="" class="small-image">
+
+                </section>
+               
+                <h3>1.5 Tracking and Stabilizing Footage</h3>
+                <section>
+
+                    <p>It is required to re-stabilize landmark video footage for action performances where the camera moves from the original captured position. We can observe that camera footage isn't perfect because eyes and teeth (upper jaw) move around from the original position. </p> 
+                    
+                    <p>This is partly due to motion distortion from the rig being attached through compression to the head and second due to parallax distance between the top of the head and bottom of the head. We use the After Effects template to stabilize the video, by locking the camera position to the eyes in frame.</p> 
+    
+                    <p>- Copy stabilization track to mouth cutout</p>
+                    <p>- Use mouth cutout .xml file of face landmarks using <em>SIRTPlugins/FaceTracker</em></p>
+                    
+                    <div class="wrapper-doublespace-bottom">
+                        <div class="note-box-wrapper">
+                            <p class="note-box-title">TRY</p>
+                            <p class="note-box-content">Use original uncompressed video as it will have better features and more detail to track see image A. (Left side = compressed image vs Right side = uncompressed image)</a>
+                               <img src="./Images/Screenshots/ImageProcessing/5.png" alt="" class="medium-image">
+                            </p>
+                        </div>
+                    </div>
+                    
+    
+                    <p>1. In the Menu bar, select File->Import->File. Import the original camera footage that is stored on the device.
+                    </p>
+    
+                    <p>2. Drag the footage file into the <em>Composition</em> area. Select the new source footage and ALT+drag the video into the composition area to replace the sequence.</p>
+    
+                    <img src="./Images/Screenshots/ImageProcessing/6.png" alt="" class="medium-image">
+    
+                    <p>3. In the Menu bar, select Window->Tracker. This opens the menu needed to track and stabilize the footage.</p>
+    
+                    <img src="./Images/Screenshots/ImageProcessing/7.png" alt="" class="small-image">
+    
+                    <p>4. Select the video in the composition area and select <em>Stabilize Motion</em> in the Tracker menu. The box that appears with a + target in the middle is the motion tracker, named Track Point 1. When selected and moved around, the tracker magnifies the area of the footage it is over.</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/8.png" alt="" class="medium-image">
+
+                    <p>5. Drag Track Point 1 to the inner corner of an ege. Choose a point for it to rest on - this is the point that will remain consistent for the stabilization. Drag the edit points of Track Point 1's rectables into tall, thin rectangles.</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/9.png" alt="" class="medium-image">
+
+                    <p>6. Click the Play button next to Analyze in the Tracker menu. As the video plays, Tracker point 1 will move away from its original position (first image below). Eliminate this movement by pressing the Stop button in the Tracker menu and dragging the point back to its original position (second image below). Press Play and repeat this process with other points that fall out of place (third image below).</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/10.png" alt="" class="small-image">
+                    <img src="./Images/Screenshots/ImageProcessing/11.png" alt="" class="small-image">
+                    <img src="./Images/Screenshots/ImageProcessing/12.png" alt="" class="small-image">
+
+                    <p>7. Once the end of the video has been reached, click Apply in the Tracker menu. In the Motion Tracker window, select the option <em><strong> X and Y</strong></em> in the <em>Apply Dimensions</em> drop down menu, and press OK.</p>
+
+                    <p>8. Now that the footage has been stabilized, play through the footage and take note of any large shifts and jumps in the footage that remain. These remaining shifts and jumps can be eliminated in two steps: </p>
+
+                    <p class="tab">i. In the timeline, delete unnecessary anchor points between two anchor positions (first image below), by highlighting them and pressing the delete key. Determine which frames shift too much by pressing the Take Snapshot button in the viewport (second image below) on a frame you would like to reference, then press the <em>Show Snapshot button </em> (third image below) on a different frame to compare the position of your motion tracker. Delete unnecessary anchor points between two frames that are in the same or a very similar position.</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/13.png" alt="" class="large-image">
+                    <img src="./Images/Screenshots/ImageProcessing/14.png" alt="" class="medium-image">
+                    <img src="./Images/Screenshots/ImageProcessing/15.png" alt="" class="medium-image">
+
+                    <p class="tab">ii. In the timeline, to eliminate minor drifting between the remaining anchor points, add a position key (image below) on a frame you would like to reference and press the <em>Take Snapshot</em>  button. On a different frame, use the <em>Show Snapshot</em>  button and arrow keys on your keyboard to move the footage until it matches the referenced frame. Repeat as needed for the length of the footage.</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/16.png" alt="" class="large-image">
+
+                    <p>9. Once this is complete, the footage is stabilized and ready to be used in the Image Processing Workflow.</p>
+
+                    <p>10. Use the registration lines to rotate/straighten and position the actor in the center of the screen, with the eye line horizontal in frame.</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/17.png" alt="" class="medium-image">
+
+
+
+                </section>
+                
+                <h3>1.6 Copy Stabilize To Mouth</h3>
+                <section>
+                    
+                    <p>Using the DDH Face Tracker plugin in After Effects: </p>
+
+                    <p>1. Make sure the composition duration, framerate and resolution are the same as the Faceware .xml file</p>
+                    <p>2. Select the layer and add the <strong>DDH Plugin - FaceTracker</strong> effect</p>
+                    <p>3. Click the Browse button in the effect and select a Faceware .xml file</p>
+                    <p>4. Go to the first frame in the sequence</p>
+                    <p>5. While the layer is selected:</p>
+                    <p class="tab">i. Select a face feature</p>
+                    <p class="tab">ii. Click the <em>Create Mask</em> button</p>
+                    <p class="doubletab">- The plugin will create a smooth mask around the selected feature</p>
+                    <p class="tab">iii. Select the corner vertices and convert them with the <em>Convert Vertex Tool</em></p>
+                    <p class="tab">iv. Click the <em>Track Mask</em> button</p>
+                    <p class="doubletab">- The plugin will create all key frames (<a href="https://www.youtube.com/watch?v=x-4NadLKlkw&ab_channel=SIRTCentre" rel="noopener noreferrer" target="_blank"><strong class="hover-link">Mask Example</strong></a>)</p>
+                    <p class="tab">v. If keyframes do not match the composition size, select mask path and scale all keys uniformly to the size of the composition (ALT+Left Click)</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/18.png" alt="" class="medium-image">
+
+                    <p>6. Make sure <em>layer 3</em>is enabled and covers the mouth area. It fills in missing screen information for the mouth mask layer</p>
+
+                    <div class="note-box-wrapper">
+                        <p class="note-box-title">NOTE</p>
+                        <p class="note-box-content">Create a reference frame if preserve RGB is turned on.
+                        </p>
+                    </div>
+
+
+                </section>
+
+                <h3>1.7 Mouth Mask</h3>
+                <section>
+                    <p>Creates automated mask for rendering the content aware fill</p>
+                    <p>1. Using UV_Snapshot (UV_FacePostion), adjust Layer 3 (copyStabilize to mouth) to match head position</p>
+                    <p>2. Transfer size and placement from Render_MouthMask composition to match video composition</p>
+                    <p class="tab">i. Line up eyes and chin location to get rough size and placement</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/19.png" alt="" class="small-image">
+
+                    <p class="tab">ii. Enable the pink mask</p>
+                    <p class="tab">iii. Hide the UV position layer and expose black and white mask to crop the mouth</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/20.png" alt="" class="small-image">
+
+                </section>
+
+                <h3>1.8 Mouth Content Aware Fill</h3>
+                <section>
+                    <p>Create an edge layer to correct texture error from the head projection</p>
+                    <p>1. Hide Fill Layer (layer 1)</p>
+                    <p>2. Select Layer 2 and go to the <em>Content Aware Fill</em> window</p>
+                    <p class="tab">- Fill method: Object, with moderate lighting correction</p>
+                    <p class="tab">- Range: Work Area</p>
+                    <p class="tab">- Generate fill layer</p> 
+                    <p>3. Change fill layer (layer 1) to lighten</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/21.png" alt="" class="small-image">
+                </section>
+
+                <h3>1.9 Render Head Projection</h3>
+                <section>
+                    <p>Create an animation reference layer for retargeting inside Maya. Blend UV and animation together for seamless projection and reprojection on characters. This compositing workflow was established for DDH to easily transfer similarly graded footage to create a texture blending that is repeatable between the UV and projection textures. The workflow can be adopted to suit your compositing needs and can be accomplished with alternative compositing structures.</p>
+                    
+                    <p>1. Paint out eyes and mouth details in Photoshop (layer 8)</p>
+                    <p class="tab">- If character has facial hair, pay special attention to the blend line on the face</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/22.png" alt="" class="small-image">
+
+                    <p>2. Add detial to the image using bump or detail extract mode in Photoshop</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/23.png" alt="" class="small-image">
+
+                    <p>3. Refine mask to fit the character's profile in layer 6</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/24.png" alt="" class="small-image">
+
+                    <p>4. Adjust shadow highlights and Lumetri color to blend out shadows and highlights</p>
+                    <p class="tab">- Start with auto amount</p>
+
+                    <p>5. Adjust refine hard matte</p>
+                    <p class="tab">- Shift edge to appropriate edge</p>
+                    <p class="tab">- Adjust decontamination (extend where smoothed) settings to smooth edges</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/25.png" alt="" class="small-image">
+
+                    <p>6. Use painted face layer to over and neutralize color on the image in layer 5</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/26.png" alt="" class="small-image">
+
+                    <p>7. Using painted face, blend edges by using <em>Darken</em> and <em>Lighten</em> color modes on layers 3 and 4</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/27.png" alt="" class="small-image">
+
+                    <p>8. Add color back into the eyes and lips using masks and original layers on top of the footage, in layers 1 and 2</p>
+
+                    <p>9. Render head projection</p>
+                    <p class="tab">i. Add to render queue</p>
+                    <p class="tab">ii. Select lossless and change format to TIFF sequence</p>
+                    <p class="tab">iii. Select output and render to:</p>
+                    <em class="doubletab">sourceimages/Takes/TakeName/TakeName_HeadProjection.[####].tif </em>
+
+                    <div class="wrapper-space-top">
+                        <p class="tab">iv. Save in subfolder using the naming convention <em>TakeName_HeadProjection</em></p>
+                    </div>
+
+                    <div class="wrapper-space-top">
+                        <h4>Known Limitations</h4>
+                        <p>1. Don't use an underscore in between numbering of files, maya reads frames with a .####. nomenclature eg. (Droids_HeadProjection.0001.tif)*</p>
+                        <p>2. Ensure that your After Effects project has a properly set up colour space</p>
+                    </div>
+                </section>
+
+                <h3>2.0 Render Mouth Fill</h3>
+                <section>
+                    <p>Cleans up edge errors between teeth and lips, and hides the nostrils behind the nose geometry when rendering combnined DDH Image in Maya</p>
+
+                    <p>1. Replace <em>Content Aware Fill</em> with a new fill layer</p>
+                    <p>2. Copy and paste Lumetri color to the layer to match color discrepancies</p>
+                    <p>3. Copy and paste <em>refine soft matte</em> to soften the edges</p>
+                    <p class="tab">- Adjust parameters to suit new texture</p>
+                    <p>4. Use <em>Liquify Warp</em> to tighten nostrils and move nose inward</p>
+
+                    <img src="./Images/Screenshots/ImageProcessing/28.png" alt="" class="small-image">
+
+                    <p>5. Render mouth fill</p>
+                    <p class="tab">i. Add to render queue</p>
+                    <p class="tab">ii. Select Lossless and change the format to TIFF sequence</p>
+                    <p class="tab">iii. Select output and render to <em>sourceimages/Takes/TakeName/TakeName_HeadMouthFill.[####].tif</em> </p>
+                    <p class="tab">iv. Save in subfolder using the naming convention <em>TakeName_HeadMouthFill</em></p>
+                </section> 
+
+            </div>  
+
+            <div class="core-content-footer">
+                <hr>
+                <em><strong>&#169</strong> Copyright 2022, Cream Productions Inc.  </em>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</body>
+</html>
